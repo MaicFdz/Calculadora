@@ -1,0 +1,8 @@
+titulo=Calculadora
+dimensiones=213x264
+colorFondo=#E7C86E
+colorLetras=#333333
+colorLetras2=#939AA0
+colorLetrasBoton=#233237
+colorFondoBoton=#E7C86E
+colorFondoImagen=#FFFFFF
