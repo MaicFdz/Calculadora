@@ -3,17 +3,31 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int calculaSuma(int num1, int num2) 
+int suma(int num1, int num2) 
 {
 	int resultado;
 	resultado = num1 + num2;
 	return resultado;
 }
 
-int calculaResta(int num1, int num2) 
+int resta(int num1, int num2) 
 {
 	int resultado;
 	resultado = num1 - num2;
+	return resultado;
+}
+
+int multiplicacion(int num1, int num2) 
+{
+	int resultado;
+	resultado = num1 * num2;
+	return resultado;
+}
+
+int division(int num1, int num2) 
+{
+	int resultado;
+	resultado = num1 / num2;
 	return resultado;
 }
 

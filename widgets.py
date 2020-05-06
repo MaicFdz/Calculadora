@@ -19,6 +19,18 @@ def cargarWidgetsIniciales(self_Ventana, self_ventanita):
   self_Ventana.Master.operacionSeleccionada='resta'
   self_ventanita.cajaEntrada.delete(0, END)
 
+ def multiplicacion():
+  if self_Ventana.Master.valorPrevio == 'vacio':
+   self_Ventana.Master.valorPrevio=self_ventanita.entrada.get()  
+  self_Ventana.Master.operacionSeleccionada='multiplicacion'
+  self_ventanita.cajaEntrada.delete(0, END)
+
+ def division():
+  if self_Ventana.Master.valorPrevio == 'vacio':
+   self_Ventana.Master.valorPrevio=self_ventanita.entrada.get()  
+  self_Ventana.Master.operacionSeleccionada='division'
+  self_ventanita.cajaEntrada.delete(0, END)
+
  def resolver():
 
   if self_Ventana.Master.operacionSeleccionada=='suma':
@@ -26,6 +38,12 @@ def cargarWidgetsIniciales(self_Ventana, self_ventanita):
 
   elif self_Ventana.Master.operacionSeleccionada=='resta':
    retorno=self_Ventana.Master.valorPrevio=self_Ventana.Master.funciones.resta(self_Ventana.Master, self_Ventana.Master.valorPrevio, self_ventanita.entrada.get())
+
+  elif self_Ventana.Master.operacionSeleccionada=='multiplicacion':
+   retorno=self_Ventana.Master.valorPrevio=self_Ventana.Master.funciones.multiplicacion(self_Ventana.Master, self_Ventana.Master.valorPrevio, self_ventanita.entrada.get())
+
+  elif self_Ventana.Master.operacionSeleccionada=='division':
+   retorno=self_Ventana.Master.valorPrevio=self_Ventana.Master.funciones.division(self_Ventana.Master, self_Ventana.Master.valorPrevio, self_ventanita.entrada.get())
 
   self_ventanita.cajaEntrada.delete(0, END)
   self_ventanita.cajaEntrada.insert(0, retorno)
@@ -104,9 +122,9 @@ def cargarWidgetsIniciales(self_Ventana, self_ventanita):
  self_ventanita.boton9.pack()
  self_ventanita.boton9.place(x=91, y=133)
 
-# self_ventanita.botonDividir=Button(self_ventanita, text='/', command=sinFuncion, foreground=self_Ventana.colorLetrasBoton, background=self_Ventana.colorFondoBoton, width=4, height=1)
-# self_ventanita.botonDividir.pack()
-# self_ventanita.botonDividir.place(x=131, y=133)
+ self_ventanita.botonDividir=Button(self_ventanita, text='/', command=division, foreground=self_Ventana.colorLetrasBoton, background=self_Ventana.colorFondoBoton, width=4, height=1)
+ self_ventanita.botonDividir.pack()
+ self_ventanita.botonDividir.place(x=131, y=133)
 
 #-------------------------------------------------------------------------------
 
@@ -122,9 +140,9 @@ def cargarWidgetsIniciales(self_Ventana, self_ventanita):
  self_ventanita.boton6.pack()
  self_ventanita.boton6.place(x=91, y=163)
 
-# self_ventanita.botonMultiplicacion=Button(self_ventanita, text='*', command=sinFuncion, foreground=self_Ventana.colorLetrasBoton, background=self_Ventana.colorFondoBoton, width=4, height=1)
-# self_ventanita.botonMultiplicacion.pack()
-# self_ventanita.botonMultiplicacion.place(x=131, y=163)
+ self_ventanita.botonMultiplicacion=Button(self_ventanita, text='*', command=multiplicacion, foreground=self_Ventana.colorLetrasBoton, background=self_Ventana.colorFondoBoton, width=4, height=1)
+ self_ventanita.botonMultiplicacion.pack()
+ self_ventanita.botonMultiplicacion.place(x=131, y=163)
 
 #-------------------------------------------------------------------------------
 

@@ -5,7 +5,7 @@ import os
 from Modulos.Mod_programaEstructurado import ProgramaEstructurado
 
 #--SET INICIAL--
-directorioInicial=u'D:/Karpeta/1_-_Programacion/1_-_Python/Proyectos_-_Iniciados/Programas/Calculadora_simple'
+directorioInicial=u'D:/Karpeta/1_-_Programacion/1_-_Python/Proyectos_-_Iniciados/Programas/Calculadora_simple_-_GitHub'
 directorioDeConfiguraciones=directorioInicial+u'/_Configuraciones'
 
 os.chdir(directorioInicial)
