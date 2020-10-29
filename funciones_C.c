@@ -10,6 +10,13 @@ int calculaSuma(int num1, int num2)
 	return resultado;
 }
 
+int calculaResta(int num1, int num2) 
+{
+	int resultado;
+	resultado = num1 - num2;
+	return resultado;
+}
+
 int main() {
 	
 	int num1, num2;

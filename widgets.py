@@ -10,16 +10,22 @@ def cargarWidgetsIniciales(self_Ventana, self_ventanita):
  def suma():
   if self_Ventana.Master.valorPrevio == 'vacio':
    self_Ventana.Master.valorPrevio=self_ventanita.entrada.get()  
-
   self_Ventana.Master.operacionSeleccionada='suma'
   self_ventanita.cajaEntrada.delete(0, END)
 
-
+ def resta():
+  if self_Ventana.Master.valorPrevio == 'vacio':
+   self_Ventana.Master.valorPrevio=self_ventanita.entrada.get()  
+  self_Ventana.Master.operacionSeleccionada='resta'
+  self_ventanita.cajaEntrada.delete(0, END)
 
  def resolver():
 
   if self_Ventana.Master.operacionSeleccionada=='suma':
    retorno=self_Ventana.Master.valorPrevio=self_Ventana.Master.funciones.suma(self_Ventana.Master, self_Ventana.Master.valorPrevio, self_ventanita.entrada.get())
+
+  elif self_Ventana.Master.operacionSeleccionada=='resta':
+   retorno=self_Ventana.Master.valorPrevio=self_Ventana.Master.funciones.resta(self_Ventana.Master, self_Ventana.Master.valorPrevio, self_ventanita.entrada.get())
 
   self_ventanita.cajaEntrada.delete(0, END)
   self_ventanita.cajaEntrada.insert(0, retorno)
@@ -134,9 +140,9 @@ def cargarWidgetsIniciales(self_Ventana, self_ventanita):
  self_ventanita.boton3.pack()
  self_ventanita.boton3.place(x=91, y=193)
 
-# self_ventanita.botonResta=Button(self_ventanita, text='-', command=sinFuncion, foreground=self_Ventana.colorLetrasBoton, background=self_Ventana.colorFondoBoton, width=4, height=1)
-# self_ventanita.botonResta.pack()
-# self_ventanita.botonResta.place(x=131, y=193)
+ self_ventanita.botonResta=Button(self_ventanita, text='-', command=resta, foreground=self_Ventana.colorLetrasBoton, background=self_Ventana.colorFondoBoton, width=4, height=1)
+ self_ventanita.botonResta.pack()
+ self_ventanita.botonResta.place(x=131, y=193)
 
  self_ventanita.botonResta=Button(self_ventanita, text='=', command=resolver, foreground=self_Ventana.colorLetrasBoton, background=self_Ventana.colorFondoBoton, width=4, height=1)
  self_ventanita.botonResta.pack()
