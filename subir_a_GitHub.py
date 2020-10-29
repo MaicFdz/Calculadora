@@ -7,9 +7,9 @@ os.system('git init')
 
 os.system('git add .')
 
-os.system('git remote add origin http://github.com/MaicFdz/Calculadora')
-
 os.system('git commit --m "nuevoCommit"')
+
+os.system('git remote add origin http://github.com/MaicFdz/Calculadora')
 
 os.system('git push origin main')
 
